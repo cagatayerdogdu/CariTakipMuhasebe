@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27581FB1-F666-4FE4-912D-FBEC72549D9D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StokTakip</RootNamespace>
+    <AssemblyName>StokTakip</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cargo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\24.11_Stok_Takip\20151007\StokTakip\TabControlDeneme\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\..\24.11_Stok_Takip\20151007\StokTakip\TabControlDeneme\bin\Debug\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fonksiyonlar.cs" />
+    <Compile Include="DAL.cs" />
+    <Compile Include="DropdownListe.cs" />
+    <Compile Include="frmAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnasayfa.Designer.cs">
+      <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDovizKurlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDovizKurlari.Designer.cs">
+      <DependentUpon>frmDovizKurlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFaturaYazdirma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFaturaYazdirma.Designer.cs">
+      <DependentUpon>frmFaturaYazdirma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFirmaSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFirmaSec.Designer.cs">
+      <DependentUpon>frmFirmaSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFirmaYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFirmaYonetimi.Designer.cs">
+      <DependentUpon>frmFirmaYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMuhasebeHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMuhasebeHareketleri.Designer.cs">
+      <DependentUpon>frmMuhasebeHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMusteriYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMusteriYonetimi.Designer.cs">
+      <DependentUpon>frmMusteriYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParaAlVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParaAlVer.Designer.cs">
+      <DependentUpon>frmParaAlVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSatisHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSatisHareketleri.Designer.cs">
+      <DependentUpon>frmSatisHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSatisRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSatisRaporu.Designer.cs">
+      <DependentUpon>frmSatisRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSatisYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSatisYonetimi.Designer.cs">
+      <DependentUpon>frmSatisYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSifreDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSifreDegistir.Designer.cs">
+      <DependentUpon>frmSifreDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokListe.Designer.cs">
+      <DependentUpon>frmStokListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokYonetimi.Designer.cs">
+      <DependentUpon>frmStokYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunHareketleri.Designer.cs">
+      <DependentUpon>frmUrunHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunImport.Designer.cs">
+      <DependentUpon>frmUrunImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunSec.Designer.cs">
+      <DependentUpon>frmUrunSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUrunYonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUrunYonetimi.Designer.cs">
+      <DependentUpon>frmUrunYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StokTakip_Fatura_View_DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StokTakip_Fatura_View_DS.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnasayfa.resx">
+      <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDovizKurlari.resx">
+      <DependentUpon>frmDovizKurlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFaturaYazdirma.resx">
+      <DependentUpon>frmFaturaYazdirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFirmaSec.resx">
+      <DependentUpon>frmFirmaSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFirmaYonetimi.resx">
+      <DependentUpon>frmFirmaYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMuhasebeHareketleri.resx">
+      <DependentUpon>frmMuhasebeHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMusteriYonetimi.resx">
+      <DependentUpon>frmMusteriYonetimi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParaAlVer.resx">
+      <DependentUpon>frmParaAlVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSatisHareketleri.resx">
+      <DependentUpon>frmSatisHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSatisRaporu.resx">
+      <DependentUpon>frmSatisRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSatisYonetimi.resx">
+      <DependentUpon>frmSatisYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSifreDegistir.resx">
+      <DependentUpon>frmSifreDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokListe.resx">
+      <DependentUpon>frmStokListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokYonetimi.resx">
+      <DependentUpon>frmStokYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunHareketleri.resx">
+      <DependentUpon>frmUrunHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunImport.resx">
+      <DependentUpon>frmUrunImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunSec.resx">
+      <DependentUpon>frmUrunSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUrunYonetimi.resx">
+      <DependentUpon>frmUrunYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StokTakip_Fatura_View_DS.xsc">
+      <DependentUpon>StokTakip_Fatura_View_DS.xsd</DependentUpon>
+    </None>
+    <None Include="StokTakip_Fatura_View_DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StokTakip_Fatura_View_DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StokTakip_Fatura_View_DS.xss">
+      <DependentUpon>StokTakip_Fatura_View_DS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\jpg\key_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\add_key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cargo.ico" />
+    <Content Include="Iconshock-Super-Vista-Accounting-Cashbox.ico" />
+    <None Include="icons\jpg\9.png" />
+    <None Include="icons\jpg\Cashbox.png" />
+    <None Include="icons\jpg\690c9859e0cc967f2c3d440cf226b3fb.png" />
+    <None Include="icons\jpg\cash_register.png" />
+    <None Include="icons\jpg\cashregister256.png" />
+    <None Include="icons\jpg\Large-truck-icon-1106111328.png" />
+    <None Include="icons\jpg\shopping-bag-icon.png" />
+    <None Include="icons\jpg\shop-cart-icon.png" />
+    <None Include="icons\jpg\2172326_troli.jpg" />
+    <None Include="icons\jpg\currency_dollar green.png" />
+    <None Include="icons\jpg\Icon512-2-1.png" />
+    <None Include="icons\jpg\Paper-Money-icon-128.png" />
+    <None Include="icons\jpg\cart-icon.png" />
+    <None Include="icons\jpg\user-icon-512.png" />
+    <None Include="icons\jpg\package.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CRLOVLib">
+      <Guid>{7DCAE754-B94A-4455-9E8A-7EAC8C3EE942}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CRQUERYENGINE">
+      <Guid>{E4B81D51-FB89-4D07-84A3-00BA9B71D76E}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="PAGEOBJECTMODELLib">
+      <Guid>{237F4BEC-8AE5-41E1-AE84-B194E4670597}</Guid>
+      <VersionMajor>14</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAXSERIALIZELib">
+      <Guid>{6EF0D172-0FAB-4FC3-BDBB-C6C0D9D69A10}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

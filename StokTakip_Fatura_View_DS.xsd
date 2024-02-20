@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StokTakip_Fatura_View_DS" targetNamespace="http://tempuri.org/StokTakip_Fatura_View_DS.xsd" xmlns:mstns="http://tempuri.org/StokTakip_Fatura_View_DS.xsd" xmlns="http://tempuri.org/StokTakip_Fatura_View_DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StokTakip_DovizKur_ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StokTakip_DovizKur_ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.StokTakip.Properties.Settings.GlobalReference.Default.StokTakip_DovizKur_ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Fatura_ViewTableAdapter" GeneratorDataComponentClassName="Fatura_ViewTableAdapter" Name="Fatura_View" UserDataComponentName="Fatura_ViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StokTakip_DovizKur_ConnectionString (Settings)" DbObjectName="StokTakip.dbo.Fatura_View" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ad_soyad, tc_kimlik, cep_tel, adres, SatisTarihi, toplam_fiyat, toplam_fiyat_kdv_dahil, fatura_no, fatura_aciklama, odeme_tipi, odenen_tutar, urun_ad, urun_marka, urun_serial, urun_model, urun_kdv, Kayit_Tarihi, birim_fiyat, miktar, vergi_dairesi, DIP_TOPLAM, Saat, Satir_KdvSiz_Fiyat, satis_id, vergi_no, Yazi_Tutar, Kdv_Tutari FROM Fatura_View</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ad_soyad" DataSetColumn="ad_soyad" />
+              <Mapping SourceColumn="tc_kimlik" DataSetColumn="tc_kimlik" />
+              <Mapping SourceColumn="cep_tel" DataSetColumn="cep_tel" />
+              <Mapping SourceColumn="adres" DataSetColumn="adres" />
+              <Mapping SourceColumn="fatura_no" DataSetColumn="fatura_no" />
+              <Mapping SourceColumn="fatura_aciklama" DataSetColumn="fatura_aciklama" />
+              <Mapping SourceColumn="odeme_tipi" DataSetColumn="odeme_tipi" />
+              <Mapping SourceColumn="urun_ad" DataSetColumn="urun_ad" />
+              <Mapping SourceColumn="urun_marka" DataSetColumn="urun_marka" />
+              <Mapping SourceColumn="urun_serial" DataSetColumn="urun_serial" />
+              <Mapping SourceColumn="urun_model" DataSetColumn="urun_model" />
+              <Mapping SourceColumn="urun_kdv" DataSetColumn="urun_kdv" />
+              <Mapping SourceColumn="vergi_dairesi" DataSetColumn="vergi_dairesi" />
+              <Mapping SourceColumn="miktar" DataSetColumn="miktar" />
+              <Mapping SourceColumn="Kayit_Tarihi" DataSetColumn="Kayit_Tarihi" />
+              <Mapping SourceColumn="satis_id" DataSetColumn="satis_id" />
+              <Mapping SourceColumn="vergi_no" DataSetColumn="vergi_no" />
+              <Mapping SourceColumn="Yazi_Tutar" DataSetColumn="Yazi_Tutar" />
+              <Mapping SourceColumn="Kdv_Tutari" DataSetColumn="Kdv_Tutari" />
+              <Mapping SourceColumn="SatisTarihi" DataSetColumn="SatisTarihi1" />
+              <Mapping SourceColumn="toplam_fiyat" DataSetColumn="toplam_fiyat1" />
+              <Mapping SourceColumn="toplam_fiyat_kdv_dahil" DataSetColumn="toplam_fiyat_kdv_dahil1" />
+              <Mapping SourceColumn="odenen_tutar" DataSetColumn="odenen_tutar1" />
+              <Mapping SourceColumn="birim_fiyat" DataSetColumn="birim_fiyat1" />
+              <Mapping SourceColumn="DIP_TOPLAM" DataSetColumn="DIP_TOPLAM1" />
+              <Mapping SourceColumn="Saat" DataSetColumn="Saat1" />
+              <Mapping SourceColumn="Satir_KdvSiz_Fiyat" DataSetColumn="Satir_KdvSiz_Fiyat1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StokTakip_Fatura_View_DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="StokTakip_Fatura_View_DS" msprop:Generator_UserDSName="StokTakip_Fatura_View_DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Fatura_View" msprop:Generator_TableClassName="Fatura_ViewDataTable" msprop:Generator_TableVarName="tableFatura_View" msprop:Generator_RowChangedName="Fatura_ViewRowChanged" msprop:Generator_TablePropName="Fatura_View" msprop:Generator_RowDeletingName="Fatura_ViewRowDeleting" msprop:Generator_RowChangingName="Fatura_ViewRowChanging" msprop:Generator_RowEvHandlerName="Fatura_ViewRowChangeEventHandler" msprop:Generator_RowDeletedName="Fatura_ViewRowDeleted" msprop:Generator_RowClassName="Fatura_ViewRow" msprop:Generator_UserTableName="Fatura_View" msprop:Generator_RowEvArgName="Fatura_ViewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ad_soyad" msprop:Generator_ColumnVarNameInTable="columnad_soyad" msprop:Generator_ColumnPropNameInRow="ad_soyad" msprop:Generator_ColumnPropNameInTable="ad_soyadColumn" msprop:Generator_UserColumnName="ad_soyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tc_kimlik" msprop:Generator_ColumnVarNameInTable="columntc_kimlik" msprop:Generator_ColumnPropNameInRow="tc_kimlik" msprop:Generator_ColumnPropNameInTable="tc_kimlikColumn" msprop:Generator_UserColumnName="tc_kimlik">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cep_tel" msprop:Generator_ColumnVarNameInTable="columncep_tel" msprop:Generator_ColumnPropNameInRow="cep_tel" msprop:Generator_ColumnPropNameInTable="cep_telColumn" msprop:Generator_UserColumnName="cep_tel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adres" msprop:Generator_ColumnVarNameInTable="columnadres" msprop:Generator_ColumnPropNameInRow="adres" msprop:Generator_ColumnPropNameInTable="adresColumn" msprop:Generator_UserColumnName="adres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SatisTarihi" msprop:Generator_ColumnVarNameInTable="columnSatisTarihi" msprop:Generator_ColumnPropNameInRow="SatisTarihi" msprop:Generator_ColumnPropNameInTable="SatisTarihiColumn" msprop:Generator_UserColumnName="SatisTarihi" type="xs:dateTime" />
+              <xs:element name="toplam_fiyat" msprop:Generator_ColumnVarNameInTable="columntoplam_fiyat" msprop:Generator_ColumnPropNameInRow="toplam_fiyat" msprop:Generator_ColumnPropNameInTable="toplam_fiyatColumn" msprop:Generator_UserColumnName="toplam_fiyat" type="xs:double" />
+              <xs:element name="toplam_fiyat_kdv_dahil" msprop:Generator_ColumnVarNameInTable="columntoplam_fiyat_kdv_dahil" msprop:Generator_ColumnPropNameInRow="toplam_fiyat_kdv_dahil" msprop:Generator_ColumnPropNameInTable="toplam_fiyat_kdv_dahilColumn" msprop:Generator_UserColumnName="toplam_fiyat_kdv_dahil" type="xs:double" />
+              <xs:element name="fatura_no" msprop:Generator_ColumnVarNameInTable="columnfatura_no" msprop:Generator_ColumnPropNameInRow="fatura_no" msprop:Generator_ColumnPropNameInTable="fatura_noColumn" msprop:Generator_UserColumnName="fatura_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fatura_aciklama" msprop:Generator_ColumnVarNameInTable="columnfatura_aciklama" msprop:Generator_ColumnPropNameInRow="fatura_aciklama" msprop:Generator_ColumnPropNameInTable="fatura_aciklamaColumn" msprop:Generator_UserColumnName="fatura_aciklama">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odeme_tipi" msprop:Generator_ColumnVarNameInTable="columnodeme_tipi" msprop:Generator_ColumnPropNameInRow="odeme_tipi" msprop:Generator_ColumnPropNameInTable="odeme_tipiColumn" msprop:Generator_UserColumnName="odeme_tipi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odenen_tutar" msprop:Generator_ColumnVarNameInTable="columnodenen_tutar" msprop:Generator_ColumnPropNameInRow="odenen_tutar" msprop:Generator_ColumnPropNameInTable="odenen_tutarColumn" msprop:Generator_UserColumnName="odenen_tutar" type="xs:double" />
+              <xs:element name="urun_ad" msprop:Generator_ColumnVarNameInTable="columnurun_ad" msprop:Generator_ColumnPropNameInRow="urun_ad" msprop:Generator_ColumnPropNameInTable="urun_adColumn" msprop:Generator_UserColumnName="urun_ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="urun_marka" msprop:Generator_ColumnVarNameInTable="columnurun_marka" msprop:Generator_ColumnPropNameInRow="urun_marka" msprop:Generator_ColumnPropNameInTable="urun_markaColumn" msprop:Generator_UserColumnName="urun_marka">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="urun_serial" msprop:Generator_ColumnVarNameInTable="columnurun_serial" msprop:Generator_ColumnPropNameInRow="urun_serial" msprop:Generator_ColumnPropNameInTable="urun_serialColumn" msprop:Generator_UserColumnName="urun_serial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="urun_model" msprop:Generator_ColumnVarNameInTable="columnurun_model" msprop:Generator_ColumnPropNameInRow="urun_model" msprop:Generator_ColumnPropNameInTable="urun_modelColumn" msprop:Generator_UserColumnName="urun_model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="urun_kdv" msprop:Generator_ColumnVarNameInTable="columnurun_kdv" msprop:Generator_ColumnPropNameInRow="urun_kdv" msprop:Generator_ColumnPropNameInTable="urun_kdvColumn" msprop:Generator_UserColumnName="urun_kdv" type="xs:int" />
+              <xs:element name="vergi_dairesi" msprop:Generator_ColumnVarNameInTable="columnvergi_dairesi" msprop:Generator_ColumnPropNameInRow="vergi_dairesi" msprop:Generator_ColumnPropNameInTable="vergi_dairesiColumn" msprop:Generator_UserColumnName="vergi_dairesi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="miktar" msprop:Generator_ColumnVarNameInTable="columnmiktar" msprop:Generator_ColumnPropNameInRow="miktar" msprop:Generator_ColumnPropNameInTable="miktarColumn" msprop:Generator_UserColumnName="miktar" type="xs:int" />
+              <xs:element name="birim_fiyat" msprop:Generator_ColumnVarNameInTable="columnbirim_fiyat" msprop:Generator_ColumnPropNameInRow="birim_fiyat" msprop:Generator_ColumnPropNameInTable="birim_fiyatColumn" msprop:Generator_UserColumnName="birim_fiyat" type="xs:double" />
+              <xs:element name="Kayit_Tarihi" msprop:Generator_ColumnVarNameInTable="columnKayit_Tarihi" msprop:Generator_ColumnPropNameInRow="Kayit_Tarihi" msprop:Generator_ColumnPropNameInTable="Kayit_TarihiColumn" msprop:Generator_UserColumnName="Kayit_Tarihi" type="xs:dateTime" />
+              <xs:element name="DIP_TOPLAM" msprop:Generator_ColumnVarNameInTable="columnDIP_TOPLAM" msprop:Generator_ColumnPropNameInRow="DIP_TOPLAM" msprop:Generator_ColumnPropNameInTable="DIP_TOPLAMColumn" msprop:Generator_UserColumnName="DIP_TOPLAM" type="xs:double" minOccurs="0" />
+              <xs:element name="Saat" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSaat" msprop:Generator_ColumnPropNameInRow="Saat" msprop:Generator_ColumnPropNameInTable="SaatColumn" msprop:Generator_UserColumnName="Saat" type="xs:duration" minOccurs="0" />
+              <xs:element name="satis_id" msprop:Generator_ColumnVarNameInTable="columnsatis_id" msprop:Generator_ColumnPropNameInRow="satis_id" msprop:Generator_ColumnPropNameInTable="satis_idColumn" msprop:Generator_UserColumnName="satis_id" type="xs:int" />
+              <xs:element name="Satir_KdvSiz_Fiyat" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSatir_KdvSiz_Fiyat" msprop:Generator_ColumnPropNameInRow="Satir_KdvSiz_Fiyat" msprop:Generator_ColumnPropNameInTable="Satir_KdvSiz_FiyatColumn" msprop:Generator_UserColumnName="Satir_KdvSiz_Fiyat" type="xs:double" minOccurs="0" />
+              <xs:element name="vergi_no" msprop:Generator_ColumnVarNameInTable="columnvergi_no" msprop:Generator_ColumnPropNameInRow="vergi_no" msprop:Generator_ColumnPropNameInTable="vergi_noColumn" msprop:Generator_UserColumnName="vergi_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Yazi_Tutar" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYazi_Tutar" msprop:Generator_ColumnPropNameInRow="Yazi_Tutar" msprop:Generator_ColumnPropNameInTable="Yazi_TutarColumn" msprop:Generator_UserColumnName="Yazi_Tutar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kdv_Tutari" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnKdv_Tutari" msprop:Generator_ColumnPropNameInRow="Kdv_Tutari" msprop:Generator_ColumnPropNameInTable="Kdv_TutariColumn" msprop:Generator_UserColumnName="Kdv_Tutari" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SatisTarihi1" msdata:ReadOnly="true" msdata:Caption="SatisTarihi" msprop:Generator_ColumnVarNameInTable="columnSatisTarihi1" msprop:Generator_ColumnPropNameInRow="SatisTarihi1" msprop:Generator_ColumnPropNameInTable="SatisTarihi1Column" msprop:Generator_UserColumnName="SatisTarihi1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="toplam_fiyat1" msdata:Caption="toplam_fiyat" msprop:Generator_ColumnVarNameInTable="columntoplam_fiyat1" msprop:Generator_ColumnPropNameInRow="toplam_fiyat1" msprop:Generator_ColumnPropNameInTable="toplam_fiyat1Column" msprop:Generator_UserColumnName="toplam_fiyat1" type="xs:decimal" />
+              <xs:element name="toplam_fiyat_kdv_dahil1" msdata:Caption="toplam_fiyat_kdv_dahil" msprop:Generator_ColumnVarNameInTable="columntoplam_fiyat_kdv_dahil1" msprop:Generator_ColumnPropNameInRow="toplam_fiyat_kdv_dahil1" msprop:Generator_ColumnPropNameInTable="toplam_fiyat_kdv_dahil1Column" msprop:Generator_UserColumnName="toplam_fiyat_kdv_dahil1" type="xs:decimal" />
+              <xs:element name="odenen_tutar1" msdata:Caption="odenen_tutar" msprop:Generator_ColumnVarNameInTable="columnodenen_tutar1" msprop:Generator_ColumnPropNameInRow="odenen_tutar1" msprop:Generator_ColumnPropNameInTable="odenen_tutar1Column" msprop:Generator_UserColumnName="odenen_tutar1" type="xs:decimal" />
+              <xs:element name="birim_fiyat1" msdata:Caption="birim_fiyat" msprop:Generator_ColumnVarNameInTable="columnbirim_fiyat1" msprop:Generator_ColumnPropNameInRow="birim_fiyat1" msprop:Generator_ColumnPropNameInTable="birim_fiyat1Column" msprop:Generator_UserColumnName="birim_fiyat1" type="xs:decimal" />
+              <xs:element name="DIP_TOPLAM1" msdata:Caption="DIP_TOPLAM" msprop:Generator_ColumnVarNameInTable="columnDIP_TOPLAM1" msprop:Generator_ColumnPropNameInRow="DIP_TOPLAM1" msprop:Generator_ColumnPropNameInTable="DIP_TOPLAM1Column" msprop:Generator_UserColumnName="DIP_TOPLAM1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Saat1" msdata:ReadOnly="true" msdata:Caption="Saat" msprop:Generator_ColumnVarNameInTable="columnSaat1" msprop:Generator_ColumnPropNameInRow="Saat1" msprop:Generator_ColumnPropNameInTable="Saat1Column" msprop:Generator_UserColumnName="Saat1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Satir_KdvSiz_Fiyat1" msdata:ReadOnly="true" msdata:Caption="Satir_KdvSiz_Fiyat" msprop:Generator_ColumnVarNameInTable="columnSatir_KdvSiz_Fiyat1" msprop:Generator_ColumnPropNameInRow="Satir_KdvSiz_Fiyat1" msprop:Generator_ColumnPropNameInTable="Satir_KdvSiz_Fiyat1Column" msprop:Generator_UserColumnName="Satir_KdvSiz_Fiyat1" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Fatura_View" />
+      <xs:field xpath="mstns:satis_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
